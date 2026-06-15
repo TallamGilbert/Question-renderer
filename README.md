@@ -29,50 +29,50 @@ All 17 required tests are in `src/components/QuestionRenderer/QuestionRenderer.t
 ```ts
 const questions: Question[] = [
   {
-    id: 'fullName',
-    label: 'Full Name',
-    type: 'text',
-    placeholder: 'e.g. Lennox Omondi',
+    id: "fullName",
+    label: "Full Name",
+    type: "text",
+    placeholder: "e.g. Gilbert Smith",
     validation: { required: true, minLength: 3, maxLength: 80 },
   },
   {
-    id: 'motivation',
-    label: 'Why do you want to join?',
-    type: 'textarea',
+    id: "motivation",
+    label: "Why do you want to join?",
+    type: "textarea",
     validation: { required: true, minLength: 50 },
   },
   {
-    id: 'educationLevel',
-    label: 'Highest Education Level',
-    type: 'select',
+    id: "educationLevel",
+    label: "Highest Education Level",
+    type: "select",
     options: [
-      { label: "Bachelor's Degree", value: 'bachelors' },
-      { label: "Master's Degree", value: 'masters' },
+      { label: "Bachelor's Degree", value: "bachelors" },
+      { label: "Master's Degree", value: "masters" },
     ],
     validation: { required: true },
   },
   {
-    id: 'preferredTrack',
-    label: 'Preferred Track',
-    type: 'radio',
+    id: "preferredTrack",
+    label: "Preferred Track",
+    type: "radio",
     options: [
-      { label: 'Full Stack', value: 'fullstack' },
-      { label: 'Frontend', value: 'frontend' },
+      { label: "Full Stack", value: "fullstack" },
+      { label: "Frontend", value: "frontend" },
     ],
     validation: { required: true },
   },
   {
-    id: 'skills',
-    label: 'Skills You Already Have',
-    type: 'checkbox',
+    id: "skills",
+    label: "Skills You Already Have",
+    type: "checkbox",
     options: [
-      { label: 'HTML', value: 'html' },
-      { label: 'CSS', value: 'css' },
-      { label: 'JavaScript', value: 'javascript' },
+      { label: "HTML", value: "html" },
+      { label: "CSS", value: "css" },
+      { label: "JavaScript", value: "javascript" },
     ],
     validation: { required: true },
   },
-]
+];
 ```
 
 Usage:
@@ -89,13 +89,13 @@ Usage:
 
 ## Question types
 
-| Type       | Renders                                   | Answer type |
-|------------|-------------------------------------------|-------------|
-| `text`     | `<input type="text" />`                   | `string`    |
-| `textarea` | `<textarea />`                            | `string`    |
-| `select`   | `<select />` with `<option />` elements   | `string`    |
-| `radio`    | One `<input type="radio" />` per option   | `string`    |
-| `checkbox` | One `<input type="checkbox" />` per option| `string[]`  |
+| Type       | Renders                                    | Answer type |
+| ---------- | ------------------------------------------ | ----------- |
+| `text`     | `<input type="text" />`                    | `string`    |
+| `textarea` | `<textarea />`                             | `string`    |
+| `select`   | `<select />` with `<option />` elements    | `string`    |
+| `radio`    | One `<input type="radio" />` per option    | `string`    |
+| `checkbox` | One `<input type="checkbox" />` per option | `string[]`  |
 
 Every question accepts an optional `validation` object:
 
@@ -127,7 +127,7 @@ Answers are keyed by question `id`. Checkbox answers are always arrays; all othe
 
 ```json
 {
-  "fullName": "Lennox Omondi",
+  "fullName": "Gilbert Smith",
   "motivation": "I want to join because I am serious about becoming a software engineer...",
   "educationLevel": "bachelors",
   "preferredTrack": "fullstack",
