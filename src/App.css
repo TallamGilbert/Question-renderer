@@ -1,0 +1,145 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f5f1e8;
+  color: #1a3a34;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background: #047857;
+  color: #fff;
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.app-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.app-subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #c0e8d6;
+}
+
+/* Paste toggle */
+.paste-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.paste-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #c0e8d6;
+  cursor: pointer;
+}
+
+.paste-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.paste-badge--on { background: #10b981; color: #fff; }
+.paste-badge--off { background: #dc2626; color: #fff; }
+
+/* Main */
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.form-card {
+  background: #fefdf9;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 680px;
+  height: fit-content;
+}
+
+/* Success panel */
+.success-panel {
+  background: #fefdf9;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+  height: fit-content;
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  background: #10b981;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.success-title { margin: 0 0 0.25rem; font-size: 1.4rem; }
+.success-sub { color: #5f6939; font-size: 0.9rem; margin: 0 0 1rem; }
+
+.success-code {
+  text-align: left;
+  background: #f5f1e8;
+  border: 1px solid #e8dcc8;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 0.82rem;
+  overflow: auto;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.success-reset {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  background: #10b981;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.success-reset:hover { background: #059669; }
+
+@media (max-width: 480px) {
+  .form-card, .success-panel { padding: 1.5rem; }
+  .app-header { padding: 1.5rem 1rem 1.25rem; }
+}

@@ -1,0 +1,182 @@
+/* ── QuestionRenderer styles ── */
+
+.qr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 640px;
+  width: 100%;
+}
+
+/* Field wrapper */
+.qr-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Labels */
+.qr-label,
+.qr-legend {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a3a34;
+  letter-spacing: 0.01em;
+}
+
+.qr-legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.qr-required {
+  color: #dc2626;
+}
+
+/* Text inputs + select */
+.qr-input,
+.qr-textarea,
+.qr-select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #1a3a34;
+  background: #fefdf9;
+  border: 1.5px solid #d4cfc4;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.qr-input:focus,
+.qr-textarea:focus,
+.qr-select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.qr-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.qr-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235f6939' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+}
+
+/* Error state */
+.qr-input--error {
+  border-color: #dc2626;
+}
+
+.qr-input--error:focus,
+.qr-textarea.qr-input--error:focus,
+.qr-select.qr-input--error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.qr-error {
+  font-size: 0.8rem;
+  color: #dc2626;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.1rem;
+}
+
+/* Radio + Checkbox groups */
+.qr-fieldset {
+  border: 1.5px solid #d4cfc4;
+  border-radius: 6px;
+  padding: 0.75rem 1rem 1rem;
+  margin: 0;
+}
+
+.qr-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.25rem;
+}
+
+.qr-option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: #1a3a34;
+  cursor: pointer;
+  padding: 0.3rem 0;
+}
+
+.qr-option-label input[type='radio'],
+.qr-option-label input[type='checkbox'] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #10b981;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.qr-option-label:hover span {
+  color: #10b981;
+}
+
+/* Submit row */
+.qr-submit-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.qr-submit {
+  align-self: flex-start;
+  padding: 0.65rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #ffffff;
+  background: #10b981;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.qr-submit:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.qr-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.qr-submit:disabled {
+  background: #a8d5ba;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.7;
+}
+
+/* Focus visible for keyboard nav */
+.qr-submit:focus-visible,
+.qr-input:focus-visible,
+.qr-textarea:focus-visible,
+.qr-select:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.qr-submit-hint {
+  font-size: 0.82rem;
+  color: #dc2626;
+  margin: 0;
+}
